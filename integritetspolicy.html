@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integritetspolicy | LöneCenter.se</title>
+    <meta name="description"
+        content="Integritetspolicy för LöneCenter.se. Läs om hur Integrity Services Sweden AB behandlar dina personuppgifter i enlighet med GDPR.">
+
+    <!-- Google Fonts: Outfit for headings, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Privacy Policy Page Styles */
+        .policy-hero {
+            padding: 160px 0 80px;
+            background: radial-gradient(circle at top right, #eef2ff 0%, #f8fafc 100%);
+            text-align: center;
+        }
+
+        .policy-hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 15px;
+        }
+
+        .policy-hero h1 span {
+            color: var(--primary);
+        }
+
+        .policy-hero .policy-meta {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .policy-content {
+            padding: 80px 0 120px;
+            background: var(--bg-white);
+        }
+
+        .policy-wrapper {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .policy-section {
+            margin-bottom: 50px;
+        }
+
+        .policy-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .policy-section h2 i {
+            width: 24px;
+            height: 24px;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .policy-section h3 {
+            font-size: 1.15rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+
+        .policy-section p,
+        .policy-section li {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .policy-section ul {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        .policy-section li {
+            margin-bottom: 6px;
+        }
+
+        .policy-section a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        .policy-section a:hover {
+            opacity: 0.7;
+        }
+
+        .policy-highlight {
+            background: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            padding: 20px 28px;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin: 24px 0;
+        }
+
+        .policy-highlight p {
+            color: var(--secondary);
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        .policy-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 24px;
+            font-size: 0.95rem;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+        }
+
+        .policy-table thead th {
+            background: var(--secondary);
+            color: white;
+            padding: 14px 18px;
+            text-align: left;
+            font-weight: 600;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .policy-table tbody td {
+            padding: 14px 18px;
+            border-bottom: 1px solid #e2e8f0;
+            color: var(--text-muted);
+            vertical-align: top;
+        }
+
+        .policy-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .policy-table tbody tr:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .policy-contact-card {
+            background: var(--bg-light);
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius-md);
+            padding: 35px 40px;
+            margin-top: 30px;
+        }
+
+        .policy-contact-card h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .policy-contact-card .contact-line {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+            color: var(--text-muted);
+        }
+
+        .policy-contact-card .contact-line i {
+            width: 18px;
+            height: 18px;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .policy-toc {
+            background: var(--bg-light);
+            border-radius: var(--radius-md);
+            padding: 30px 35px;
+            margin-bottom: 50px;
+        }
+
+        .policy-toc h3 {
+            font-size: 1.1rem;
+            margin-bottom: 14px;
+            margin-top: 0;
+        }
+
+        .policy-toc ol {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .policy-toc li {
+            margin-bottom: 6px;
+        }
+
+        .policy-toc a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        .policy-toc a:hover {
+            opacity: 0.7;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: gap 0.3s ease;
+        }
+
+        .back-link:hover {
+            gap: 12px;
+        }
+
+        .back-link i {
+            width: 18px;
+            height: 18px;
+        }
+
+        @media (max-width: 900px) {
+            .policy-wrapper {
+                padding: 0 15px;
+            }
+
+            .policy-contact-card {
+                padding: 25px;
+            }
+
+            .policy-table {
+                font-size: 0.85rem;
+            }
+
+            .policy-table thead th,
+            .policy-table tbody td {
+                padding: 10px 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Löne<span>Center</span></a>
+            <nav class="nav-links">
+                <a href="index.html#services">Våra tjänster</a>
+                <a href="index.html#method">Vårt arbetssätt</a>
+                <a href="index.html#about">Om oss</a>
+                <a href="index.html#contact" class="btn-primary">Boka konsultation</a>
+            </nav>
+            <button class="mobile-menu-toggle" id="mobile-toggle">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Policy Hero -->
+        <section class="policy-hero">
+            <div class="container">
+                <a href="index.html" class="back-link"><i data-lucide="arrow-left"></i> Tillbaka till startsidan</a>
+                <h1>Integritets<span>policy</span></h1>
+                <p class="policy-meta">Senast uppdaterad: 5 april 2026</p>
+            </div>
+        </section>
+
+        <!-- Policy Content -->
+        <section class="policy-content">
+            <div class="container">
+                <div class="policy-wrapper">
+
+                    <!-- Table of Contents -->
+                    <div class="policy-toc">
+                        <h3>Innehåll</h3>
+                        <ol>
+                            <li><a href="#section-1">Personuppgiftsansvarig</a></li>
+                            <li><a href="#section-2">Vilka personuppgifter vi samlar in</a></li>
+                            <li><a href="#section-3">Hur vi samlar in dina uppgifter</a></li>
+                            <li><a href="#section-4">Ändamål och rättslig grund</a></li>
+                            <li><a href="#section-5">Lagring och lagringstider</a></li>
+                            <li><a href="#section-6">Delning med tredje part</a></li>
+                            <li><a href="#section-7">Dina rättigheter</a></li>
+                            <li><a href="#section-8">Cookies och spårning</a></li>
+                            <li><a href="#section-9">Säkerhet</a></li>
+                            <li><a href="#section-10">Ändringar i denna policy</a></li>
+                            <li><a href="#section-11">Kontakt och klagomål</a></li>
+                        </ol>
+                    </div>
+
+                    <!-- 1. Personuppgiftsansvarig -->
+                    <div class="policy-section" id="section-1">
+                        <h2><i data-lucide="building-2"></i> 1. Personuppgiftsansvarig</h2>
+                        <p>Ansvarig för behandlingen av dina personuppgifter är:</p>
+                        <div class="policy-highlight">
+                            <p><strong>Integrity Services Sweden AB</strong><br>
+                                Organisationsnummer: 559486-0586<br>
+                                E-post: <a href="mailto:james@lonecenter.se">james@lonecenter.se</a></p>
+                        </div>
+                        <p>Vi på LöneCenter (ett varumärke under Integrity Services Sweden AB) värnar om din personliga
+                            integritet. Denna policy förklarar hur vi samlar in, behandlar och skyddar dina
+                            personuppgifter i enlighet med EU:s dataskyddsförordning (GDPR) samt övrig tillämplig
+                            dataskyddslagstiftning.</p>
+                    </div>
+
+                    <!-- 2. Vilka personuppgifter vi samlar in -->
+                    <div class="policy-section" id="section-2">
+                        <h2><i data-lucide="user-check"></i> 2. Vilka personuppgifter vi samlar in</h2>
+                        <p>Vi behandlar olika typer av personuppgifter beroende på sammanhanget. Nedan beskrivs de
+                            kategorier vi kan komma att hantera:</p>
+
+                        <h3>Kontaktuppgifter</h3>
+                        <ul>
+                            <li>Namn</li>
+                            <li>E-postadress</li>
+                            <li>Telefonnummer</li>
+                            <li>Företagsnamn och organisationsnummer</li>
+                        </ul>
+
+                        <h3>Uppgifter i samband med lönehantering</h3>
+                        <ul>
+                            <li>Personnummer och identitetshandlingar</li>
+                            <li>Löneuppgifter och anställningsvillkor</li>
+                            <li>Bankkontonummer för löneutbetalningar</li>
+                            <li>Uppgifter om semester, frånvaro och arbetstider</li>
+                            <li>Pensionsavsättningar och förmåner</li>
+                            <li>Skatteuppgifter och arbetsgivaravgifter</li>
+                        </ul>
+
+                        <h3>Tekniska uppgifter</h3>
+                        <ul>
+                            <li>IP-adress och webbläsarinformation (vid besök på vår webbplats)</li>
+                            <li>Cookies och liknande spårningsteknik</li>
+                        </ul>
+                    </div>
+
+                    <!-- 3. Hur vi samlar in dina uppgifter -->
+                    <div class="policy-section" id="section-3">
+                        <h2><i data-lucide="inbox"></i> 3. Hur vi samlar in dina uppgifter</h2>
+                        <p>Vi samlar in personuppgifter på följande sätt:</p>
+                        <ul>
+                            <li><strong>Direkt från dig</strong> – när du kontaktar oss via kontaktformuläret på
+                                webbplatsen, e-post eller telefon.</li>
+                            <li><strong>Från din arbetsgivare</strong> – när vi anlitas som lönekonsulter erhåller vi
+                                nödvändiga personaluppgifter från uppdragsgivaren.</li>
+                            <li><strong>Automatiskt</strong> – via cookies och loggfiler när du besöker vår webbplats.
+                            </li>
+                            <li><strong>Från tredje part</strong> – exempelvis från bokföringssystem som Visma eller
+                                Fortnox, i den mån det krävs för att utföra vårt uppdrag.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 4. Ändamål och rättslig grund -->
+                    <div class="policy-section" id="section-4">
+                        <h2><i data-lucide="scale"></i> 4. Ändamål och rättslig grund</h2>
+                        <p>Vi behandlar dina personuppgifter för specifika ändamål och med stöd av en rättslig grund
+                            enligt GDPR:</p>
+
+                        <table class="policy-table">
+                            <thead>
+                                <tr>
+                                    <th>Ändamål</th>
+                                    <th>Rättslig grund</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Besvara förfrågningar via kontaktformuläret</td>
+                                    <td>Berättigat intresse (Art. 6.1 f)</td>
+                                </tr>
+                                <tr>
+                                    <td>Utföra lönehantering och myndighetsrapportering</td>
+                                    <td>Fullgörande av avtal (Art. 6.1 b) och rättslig förpliktelse (Art. 6.1 c)</td>
+                                </tr>
+                                <tr>
+                                    <td>Bokföring och redovisning</td>
+                                    <td>Rättslig förpliktelse (Art. 6.1 c) – bokföringslagen</td>
+                                </tr>
+                                <tr>
+                                    <td>Förbättra webbplatsens funktion och användarupplevelse</td>
+                                    <td>Berättigat intresse (Art. 6.1 f)</td>
+                                </tr>
+                                <tr>
+                                    <td>Marknadsföring och nyhetsbrev (om tillämpligt)</td>
+                                    <td>Samtycke (Art. 6.1 a)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 5. Lagring och lagringstider -->
+                    <div class="policy-section" id="section-5">
+                        <h2><i data-lucide="database"></i> 5. Lagring och lagringstider</h2>
+                        <p>Vi sparar personuppgifter så länge det är nödvändigt för att uppfylla det ändamål de samlades
+                            in för, eller så länge vi har en rättslig grund att göra det.</p>
+
+                        <table class="policy-table">
+                            <thead>
+                                <tr>
+                                    <th>Typ av uppgift</th>
+                                    <th>Lagringstid</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Kontaktförfrågningar</td>
+                                    <td>12 månader efter senaste kontakt</td>
+                                </tr>
+                                <tr>
+                                    <td>Löneunderlag och bokföringsmaterial</td>
+                                    <td>7 år enligt bokföringslagen</td>
+                                </tr>
+                                <tr>
+                                    <td>Kundavtal och dokumentation</td>
+                                    <td>Under avtalstiden samt 36 månader därefter</td>
+                                </tr>
+                                <tr>
+                                    <td>Cookies och webbstatistik</td>
+                                    <td>Se avsnitt om cookies</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p>Efter att lagringstiden löpt ut raderas eller anonymiseras uppgifterna.</p>
+                    </div>
+
+                    <!-- 6. Delning med tredje part -->
+                    <div class="policy-section" id="section-6">
+                        <h2><i data-lucide="share-2"></i> 6. Delning med tredje part</h2>
+                        <p>Vi säljer aldrig dina personuppgifter. Vi kan dock komma att dela dem med följande kategorier
+                            av mottagare, i den utsträckning som krävs:</p>
+                        <ul>
+                            <li><strong>Myndigheter</strong> – Skatteverket, Försäkringskassan och andra myndigheter vid
+                                lagstadgad rapportering.</li>
+                            <li><strong>Systemleverantörer</strong> – Visma, Fortnox eller annan programvara som används
+                                för lönehantering, i egenskap av personuppgiftsbiträden.</li>
+                            <li><strong>IT-tjänsteleverantörer</strong> – hosting- och e-postleverantörer som bistår oss
+                                med drift av våra system.</li>
+                        </ul>
+
+                        <p>Vi säkerställer alltid att det finns lämpliga avtal (personuppgiftsbiträdesavtal) på plats
+                            med tredje parter som behandlar personuppgifter för vår räkning.</p>
+
+                        <div class="policy-highlight">
+                            <p>Vi överför inte personuppgifter till länder utanför EU/EES om det inte finns lämpliga
+                                skyddsåtgärder i enlighet med GDPR.</p>
+                        </div>
+                    </div>
+
+                    <!-- 7. Dina rättigheter -->
+                    <div class="policy-section" id="section-7">
+                        <h2><i data-lucide="shield-check"></i> 7. Dina rättigheter</h2>
+                        <p>Enligt GDPR har du som registrerad ett antal rättigheter avseende dina personuppgifter:</p>
+                        <ul>
+                            <li><strong>Rätt till tillgång</strong> – Du har rätt att begära ett registerutdrag för att
+                                ta del av vilka personuppgifter vi behandlar om dig.</li>
+                            <li><strong>Rätt till rättelse</strong> – Du har rätt att begära att felaktiga eller
+                                ofullständiga uppgifter korrigeras.</li>
+                            <li><strong>Rätt till radering</strong> – Du har rätt att begära att vi raderar dina
+                                personuppgifter, under förutsättning att det inte finns en legal skyldighet att behålla
+                                dem.</li>
+                            <li><strong>Rätt till begränsning</strong> – Du har rätt att begära att behandlingen av dina
+                                uppgifter begränsas i vissa fall.</li>
+                            <li><strong>Rätt till dataportabilitet</strong> – Du har rätt att få ut dina uppgifter i ett
+                                strukturerat, maskinläsbart format.</li>
+                            <li><strong>Rätt att göra invändningar</strong> – Du har rätt att invända mot behandling som
+                                grundas på berättigat intresse.</li>
+                            <li><strong>Rätt att återkalla samtycke</strong> – Om behandlingen grundar sig på samtycke,
+                                kan du när som helst återkalla det utan att det påverkar lagligheten av behandling som
+                                skett innan återkallelsen.</li>
+                        </ul>
+
+                        <p>Vill du utöva någon av dina rättigheter, kontakta oss på <a
+                                href="mailto:james@lonecenter.se">james@lonecenter.se</a>. Vi besvarar din begäran inom
+                            30 dagar.</p>
+                    </div>
+
+                    <!-- 8. Cookies -->
+                    <div class="policy-section" id="section-8">
+                        <h2><i data-lucide="cookie"></i> 8. Cookies och spårning</h2>
+                        <p>Vår webbplats kan använda cookies för att förbättra din upplevelse. Cookies är små textfiler
+                            som sparas på din enhet.</p>
+
+                        <h3>Kategorier av cookies</h3>
+                        <ul>
+                            <li><strong>Nödvändiga cookies</strong> – Krävs för att webbplatsen ska fungera korrekt.
+                                Dessa kan inte stängas av.</li>
+                            <li><strong>Analytiska cookies</strong> – Hjälper oss att förstå hur besökare använder
+                                webbplatsen (t.ex. Google Analytics).</li>
+                            <li><strong>Marknadsföringscookies</strong> – Kan användas för att visa relevanta annonser
+                                (om tillämpligt).</li>
+                        </ul>
+
+                        <p>Du kan när som helst hantera dina cookieinställningar i din webbläsare. Observera att vissa
+                            funktioner på webbplatsen kan påverkas om du väljer att blockera cookies.</p>
+                    </div>
+
+                    <!-- 9. Säkerhet -->
+                    <div class="policy-section" id="section-9">
+                        <h2><i data-lucide="lock"></i> 9. Säkerhet</h2>
+                        <p>Vi vidtar lämpliga tekniska och organisatoriska åtgärder för att skydda dina personuppgifter
+                            mot obehörig åtkomst, förlust, förstöring eller ändring. Exempel på sådana åtgärder
+                            inkluderar:</p>
+                        <ul>
+                            <li>Krypterade kommunikationskanaler (SSL/TLS).</li>
+                            <li>Behörighetsstyrning och åtkomstbegränsning.</li>
+                            <li>Regelbundna säkerhetsgranskningar och uppdateringar av system.</li>
+                            <li>Sekretessavtal med medarbetare och samarbetspartners.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 10. Ändringar -->
+                    <div class="policy-section" id="section-10">
+                        <h2><i data-lucide="refresh-cw"></i> 10. Ändringar i denna policy</h2>
+                        <p>Vi förbehåller oss rätten att uppdatera denna integritetspolicy. Vid väsentliga ändringar
+                            informerar vi på vår webbplats. Vi rekommenderar att du regelbundet läser igenom denna
+                            policy för att hålla dig informerad om hur vi skyddar dina uppgifter.</p>
+                        <p>Den senaste versionen av policyn publicerades <strong>5 april 2026</strong>.</p>
+                    </div>
+
+                    <!-- 11. Kontakt -->
+                    <div class="policy-section" id="section-11">
+                        <h2><i data-lucide="mail"></i> 11. Kontakt och klagomål</h2>
+                        <p>Har du frågor om vår behandling av personuppgifter, eller vill du utöva dina rättigheter?
+                            Kontakta oss:</p>
+
+                        <div class="policy-contact-card">
+                            <h3>Integrity Services Sweden AB</h3>
+                            <div class="contact-line">
+                                <i data-lucide="hash"></i>
+                                <span>Org.nr: 559486-0586</span>
+                            </div>
+                            <div class="contact-line">
+                                <i data-lucide="mail"></i>
+                                <a href="mailto:james@lonecenter.se">james@lonecenter.se</a>
+                            </div>
+                        </div>
+
+                        <p style="margin-top: 24px;">Om du anser att vi behandlar dina personuppgifter i strid med GDPR
+                            har du rätt att lämna in ett klagomål till <a href="https://www.imy.se"
+                                target="_blank">Integritetsskyddsmyndigheten (IMY)</a>.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-v2-grid">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">Löne<span>Center</span></a>
+                    <p>Din personliga expert på löne- och personaladministration.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="integritetspolicy.html">Integritet & GDPR</a>
+                    <a href="#cookie-settings">Cookiehantering</a>
+                    <a href="index.html#contact">Hitta hit</a>
+                </div>
+                <p class="copyright">&copy; 2026 LöneCenter.se. Skapat för tillväxt.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="cookies.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    </script>
+</body>
+
+</html>

@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ─── Form Handling ──────────────────────────────────────
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = contactForm.querySelector('button');
             const originalText = btn.innerText;
@@ -74,13 +74,30 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.style.opacity = '0.7';
             btn.disabled = true;
 
-            setTimeout(() => {
-                alert('Tack för ditt meddelande! Vi på LöneCenter hör av oss till dig inom kort.');
-                contactForm.reset();
+            const formData = new FormData(contactForm);
+            
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    alert('Tack för ditt meddelande! Vi på LöneCenter hör av oss till dig inom kort.');
+                    contactForm.reset();
+                } else {
+                    alert('Hoppsan! Något gick fel. Vänligen försök igen eller maila oss direkt på hej@lonecenter.se');
+                }
+            } catch (error) {
+                alert('Ett fel uppstod vid ansökan. Kontrollera din internetanslutning och försök igen.');
+            } finally {
                 btn.innerText = originalText;
                 btn.style.opacity = '1';
                 btn.disabled = false;
-            }, 1200);
+            }
         });
     }
     // ─── Service Card Toggle ────────────────────────────────

@@ -391,10 +391,10 @@
                                 </div>
                             </div>
                         </div>
-                        <form id="contactForm" class="v2-form">
-                            <input type="text" placeholder="Namn" required>
-                            <input type="email" placeholder="E-postadress" required>
-                            <textarea placeholder="Vad funderar du på?" rows="3"></textarea>
+                        <form id="contactForm" class="v2-form" action="https://formspree.io/f/xjgpdrny" method="POST">
+                            <input type="text" name="name" placeholder="Namn" required>
+                            <input type="email" name="email" placeholder="E-postadress" required>
+                            <textarea name="message" placeholder="Vad funderar du på?" rows="3"></textarea>
                             <button type="submit" class="btn-primary">Skicka förfrågan</button>
                         </form>
                     </div>

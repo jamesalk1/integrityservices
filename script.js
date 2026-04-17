@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (response.ok) {
-                    alert('Tack för ditt meddelande! Vi på Integrity Services IT hör av oss till dig inom kort.');
+                    alert('Tack för ditt meddelande! Vi på Integrity Services hör av oss till dig inom kort.');
                     contactForm.reset();
                 } else {
                     alert('Hoppsan! Något gick fel. Vänligen försök igen eller maila oss direkt på info@integrityservices.se');
